@@ -1,6 +1,16 @@
 import React, { Component } from "react";
+import "./uploadImage.css"
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
+
+
+const options = [
+  'one', 'two', 'three'
+];
+const defaultOption = options[0];
 
 export default class UploadImages extends Component {
+  
   constructor(props) {
     super(props);
     this.selectFile = this.selectFile.bind(this);
@@ -9,6 +19,10 @@ export default class UploadImages extends Component {
       previewImage: undefined,
     };
   }
+
+  onSelect = e => {
+      console.log(e)
+  }  
 
   selectFile(event) {
     this.setState({
@@ -22,15 +36,18 @@ export default class UploadImages extends Component {
     return (
       <div>
         <div>
-          <div>
-            <label>
-              <input type="file" accept="image/*" onChange={this.selectFile} />
+          <div className="main-upload">
+            <label className="upload-btn">
+              <input id="actual-btn" type="file" accept="image/*" onChange={this.selectFile} hidden/>
+              <label className="upload-button" htmlFor="actual-btn">Upload Image</label>
             </label>
+            <Dropdown options={options} onChange={this.onSelect} value={defaultOption} placeholder="Select an option" />
+
           </div>
         </div>
 
         {previewImage && (
-          <div>
+          <div className="main-image">
             <img src={previewImage} alt="" />
           </div>
         )}
