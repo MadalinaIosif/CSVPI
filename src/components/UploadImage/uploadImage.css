@@ -8,6 +8,16 @@
     margin-top: 1rem;
   }
 
+.delete-button {
+    background-color: #e45305;
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
   .main-upload {
       margin-top: 50px;
       display: flex;
@@ -33,5 +43,6 @@
       text-align: center;
       line-height: 15px;
     font-family: sans-serif;
+    margin-right: 20px;
 
   }

@@ -5,17 +5,22 @@ import 'react-dropdown/style.css';
 
 
 const options = [
-  'onasdasdsdasdasdas a asd asdasdasde', 'two', 'three'
+  'Grayscale', 'Blur', 'Sepia'
 ];
 const defaultOption = options[0];
 
 const UploadImages = () => {
-  const [previewImage, setPreviewImage] = useState();
+  const [previewImage, setPreviewImage] = useState()
 
 
   const selectFile = (event) => {
-    setPreviewImage( URL.createObjectURL(event.target.files[0]));
+    setPreviewImage( URL.createObjectURL(event.target.files[0]))
   }
+
+  const deletePhoto = () => {
+    setPreviewImage()
+  }
+
   return (
     <div>
         <div>
@@ -24,8 +29,8 @@ const UploadImages = () => {
               <input id="actual-btn" type="file" accept="image/*" onChange={selectFile} hidden/>
               <label className="upload-button" htmlFor="actual-btn">Upload Image</label>
             </label>
-            <Dropdown className="dropdown" options={options} onChange={this.onSelect} value={defaultOption} placeholder="Select an option" />
-
+            { previewImage && <Dropdown className="dropdown" options={options} value={defaultOption} placeholder="Select an option" />}
+            { previewImage && <p className="delete-button" onClick={deletePhoto} >Delete photo</p>}
           </div>
         </div>
 
@@ -38,4 +43,4 @@ const UploadImages = () => {
   )
 }
 
-export default UploadImages;
+export default UploadImages
