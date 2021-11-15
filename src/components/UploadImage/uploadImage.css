@@ -24,3 +24,14 @@
   .upload-btn {
       margin-right: 20px;
   }
+
+  .dropdown > div  {
+      border: 0px;
+      border-radius: 5px;
+      background-color: #FF9B42;
+      color: white;
+      text-align: center;
+      line-height: 15px;
+    font-family: sans-serif;
+
+  }
