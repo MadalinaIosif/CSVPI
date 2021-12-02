@@ -1,19 +1,10 @@
-# Getting Started with Create React App
+Pentru a putea rula proiectul trebuiesc instalate urmatoarele programe:
+Nodejs - https://nodejs.org/en/download/
+Git - https://git-scm.com/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pentru a putea rula proiectul:
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm install`
-
-### `npm start`
-
-### `Add your implementation in uploadImage component`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Deschideti proiectul in visual studio code
+2. Deschideti terminalul (In meniul de sus, Terminal -> new terminal)
+3. Odata deschis terminalul, npm install
+4. Dupa ce s-a terminat instalarea, npm start
